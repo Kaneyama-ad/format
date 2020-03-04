@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.55 49.24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+    <g id="facebook" data-name="facebook">
+      <path id="f" class="cls-1" d="M16.55,49.24V26.81h7.57L25.25,18h-8.7V12.44c0-2.54.71-4.26,4.35-4.26h4.65V.34A63.43,63.43,0,0,0,18.8,0C12.11,0,7.55,4.08,7.55,11.57V18H0v8.78H7.55V49.24Z"/>
+    </g>
+</svg>

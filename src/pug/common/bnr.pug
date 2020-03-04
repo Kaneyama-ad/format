@@ -1,0 +1,8 @@
+include ../_data.pug
+
+.banner
+  ul.bannerList
+    each item in bnr
+      li.bannerList_lay
+        a(href=`${url}` target="_blank").bannerList_cont
+          img(src=`/ads/ninkatsu/img/bnr/${item.id}.jpg` alt="").w100

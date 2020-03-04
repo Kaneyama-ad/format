@@ -1,0 +1,24 @@
+include ../_data.pug
+
+h2.title_label.bg_rose.mt-80.txt_white #{articleTitle}
+
+ul.list-2-colmn.plr-100px.fadein(data-fadein="fadeInUp")
+  each item,index in article
+    li.list-2-colmn_lay(class=index>3?"is-hide":"")
+      a(href=`/ads/ninkatsu/article_${item.id}/` target="_blank").list-2-colmn_cont
+        .list-2-colmn_cont_thum
+          img(src=`/ads/ninkatsu/article_${item.id}/img/thum.jpg` alt="Article").w100.list-2-colmn_cont_thum_img
+        date.list-2-colmn_cont_date #{item.date}
+        p.list-2-colmn_cont_title #{item.title}
+
+a.btn.sp_center.w300px.mt-30.m-auto.viewMoreBtn(data-more-cnt="4" data-more-target="list-2-colmn_lay") VIEW MORE
+
+h2.title_label.bg_rose.mt-80.txt_white !{otherTitle}
+ul.list-1-colmn.plr-100px.fadein(data-fadein="fadeInUp")
+  each item,index in other
+    li.list-1-colmn_lay
+      a(href=`/ads/ninkatsu/other_${item.id}/` target="_blank").list-1-colmn_cont
+        .list-1-colmn_cont_thum
+          img(src=`/ads/ninkatsu/other_${item.id}/img/thum.jpg` alt="").w100.list-1-colmn_cont_thum_img
+        date.list-1-colmn_cont_date #{item.date}
+        p.list-1-colmn_cont_title #{item.title}    

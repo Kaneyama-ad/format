@@ -1,0 +1,7 @@
+<script type="text/javascript" language="JavaScript">
+$.get("/earthquake/news/esi/max_emergency_box1_utf8.htm", function (myData, myStatus) {
+if (myStatus == "success" && myData.match(/max_earthquakealert\.html/)) {
+$("#earthquake_read_text").html(myData);
+}});
+</script>
+<div id="earthquake_read_text"></div> 

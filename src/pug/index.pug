@@ -1,0 +1,27 @@
+include _data.pug
+doctype html
+html(lang="ja")
+  head
+    include _tdk.pug
+    .
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700|Roboto:900&display=swap" rel="stylesheet">
+  body#top.top
+    .container
+      include _header.pug
+      include _footer.pug
+
+    .
+      <!-- 広告タグ -->
+      <esi:include src="/ad/esi/bunseki/impact-ad_utf8.htm" onerror="continue" maxwait="2000" />
+      <!--#include virtual="/ad/esi/bunseki/impact-ad_utf8.htm"-->
+      <!-- ソーシャル用タグ -->
+      <esi:include src="/news/esi/SocialEmbeddedTag2015.htm" onerror="continue" maxwait="2000" />
+      <!--#include virtual="/news/esi/SocialEmbeddedTag2015.htm"-->
+      <!-- 分析タグ２ -->
+      <esi:include src="/news/esi/dtm2_utf8.htm" onerror="continue" maxwait="2000" />
+      <!--#include virtual="/news/esi/dtm2_utf8.htm"-->
+  .
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/ofi.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>

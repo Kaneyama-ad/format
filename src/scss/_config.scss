@@ -1,0 +1,42 @@
+$breakpoints: (
+  'sp': 'screen and (max-width: 749px)',
+  'pc': 'screen and (min-width: 750px)'
+)
+!default;
+@mixin mq($breakpoint: pc) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+.sp {
+  @include mq() {
+    display: none !important;
+  }
+}
+
+.pc {
+  @include mq(sp) {
+    display: none !important;
+  }
+}
+
+.a_block {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+$gray:#7b7b7b;
+$silver:#f5f5f5;
+$white : #FFF;
+$black : #000;
+
+$green:#336636;
+$rose:#a54b55;
+
+$black-opa:rgba(0,0,0,0.7);
+
+$max-w:1400px;
+$mid-w:1000px;
+$min-w:800px;

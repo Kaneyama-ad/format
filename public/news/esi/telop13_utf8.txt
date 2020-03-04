@@ -1,0 +1,1 @@
+<!--telop|BGN--><!-- テロップはありません $!{telop_text} --><!--telop|END-->
