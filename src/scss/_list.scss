@@ -1,0 +1,84 @@
+.list {
+  &-toggle {
+    // margin: auto;
+    // max-width: 800px;
+    width: 100%;
+
+    &_item {
+      border-top: 1px dashed $gray;
+      padding: 10px 0px;
+      &:last-child{
+        border-bottom: 1px dashed $gray;
+      }
+    }
+
+    &_header {
+      cursor: pointer;
+      padding: 10px 5px;
+      transition: background 0.5s;
+      &:hover{
+        @include mq(){
+          background: $silver;
+        }
+      }
+    }
+
+    &_date{
+      font-size: 0.8em;
+    }
+    &_title{
+    }
+    &_text{
+      font-size: 0.9em;
+      line-height: 1.8;
+      @include mq(sp){
+        padding: 0 15px;
+      }
+    }
+
+    &_icon {
+      width: 30px;
+      height: 25px;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+
+      &-1,
+      &-2 {
+        display: inline-block;
+        transition: all 0.4s;
+        box-sizing: border-box;
+        position: absolute;
+        left: 0;
+        width: 50%;
+        height: 1px;
+        background: $gray;
+        border-radius: 4px;
+        top: 2px;
+      }
+
+      &-1 {
+        transform: translateX(10px) rotate(-45deg);
+      }
+
+      &-2 {
+        transform: translateX(0px) rotate(45deg);
+      }
+      &.open{
+        .list-toggle_icon-1{
+            transform: translateX(0px) rotate(-45deg);
+        }
+        .list-toggle_icon-2{
+          transform: translateX(10px) rotate(45deg);
+        }
+      }
+
+
+    }
+
+    &_body {
+      display: none;
+      margin-top: 10px;
+    }
+  }
+}

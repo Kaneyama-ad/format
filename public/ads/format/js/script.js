@@ -10,13 +10,16 @@ $(window).on("scroll", function () {
     scrollAnime();
 });
 $(function () {
-    objectFitImages();
+    // objectFitImages();
     $('a.scroller[href^="#"]').click(function () {
-        var href = $(this).attr("href");
-        var target = $(href);
+        var target = $($(this).attr("href"));
         var position = target.offset().top;
         $('body,html').stop().animate({ scrollTop: position }, 500);
         return false;
+    });
+    $(".list-toggle_header").on('click', function () {
+        $(this).next().slideToggle();
+        $(this).find(".list-toggle_icon").toggleClass("open");
     });
 });
 function scrollAnime() {

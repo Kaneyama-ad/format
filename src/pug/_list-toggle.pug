@@ -1,0 +1,12 @@
+.wrap800
+  ul.list-toggle
+    each item,index in lists
+      li.list-toggle_item
+        .list-toggle_header
+          date.list-toggle_date.rubik.fw500 !{item.date}
+          p.list-toggle_title.fw500 !{item.title}
+          .list-toggle_icon
+            span.list-toggle_icon-1
+            span.list-toggle_icon-2
+        .list-toggle_body
+          p.list-toggle_text !{item.text}
